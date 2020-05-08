@@ -1,0 +1,11 @@
+*{
+  outline: cyan, dashed, 2px;
+  box-sizing: border-box;
+  overflow: hidden;
+  
+}
+
+main {
+  max-width: 767px;
+  grid-template: 2fr ;
+}
