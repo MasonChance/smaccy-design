@@ -19,6 +19,7 @@
 
   main :nth-child(1), section:nth-child(2), section:nth-child(3), section:nth-child(4){ 
     grid-column:1 /span 2;
+    grid-row: auto / span 1;
     
   }
 
