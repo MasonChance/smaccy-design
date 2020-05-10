@@ -1,0 +1,96 @@
+main > * {
+  
+  text-align: center;
+    
+}
+
+section{
+  padding: 3rem 0;
+}
+
+section:nth-child(2){
+  padding: 15rem 0;
+}
+
+section:nth-child(3), section:nth-child(4){
+  padding: 5rem 0;
+}
+
+aside{
+  padding: 7rem 0;
+}
+
+footer{
+  padding: 4rem 0;
+}
+
+/* =============== Mobile First Styling ===================== */
+@media(max-width:600px){
+
+  body {
+    color: rebeccapurple;
+    background-color: #1C1E1F;
+  }
+
+  section {
+    background-color: inherit;
+  }
+
+  section:nth-child(2){
+    padding: 2rem 0;
+  }
+
+}
+
+
+
+
+
+/*================Tablet Layout====================== */
+
+@media(min-width: 601px){
+  
+  main {
+    background-color: lightslategrey;
+    
+  }
+
+  section, aside {
+    color: lawngreen;
+    background-color: inherit;
+  }
+
+  section:nth-child(2), section:nth-child(3), section:nth-child(4){
+    background-color: red;
+    border: navy 10px groove;
+  }
+
+
+  footer {
+    color: rebeccapurple;
+    background-color: red;
+    border: navy 10px groove;
+  }
+
+}
+
+
+
+
+
+
+/*============== (lap || Desk)top Device Breakpoint. =================*/
+@media(min-width: 920px){
+
+  section:nth-child(2){
+    background-color: navy;
+  }
+
+  section:nth-child(3), section:nth-child(4){
+    background-color: rebeccapurple;
+  }
+
+  main :last-child{
+    background-color: rebeccapurple;
+  }
+}

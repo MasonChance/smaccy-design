@@ -1,11 +1,161 @@
-*{
-  outline: cyan, dashed, 2px;
+* {
+  outline: red dotted 2px;
   box-sizing: border-box;
-  overflow: hidden;
+  /* overflow: hidden; */
+ 
+}
+
+/* =============== Mobile First Styling ===================== */
+@media(max-width:600px){
+  main {
+    overflow: visible auto  ;
+    scrollbar-width: 30px;
+    display: grid;
+    max-width: 480px;
+    margin: 100px auto;
+    grid-template-rows:  75px 150px repeat(2, 125px [row-start]) repeat(2, 250px [row-start]) 80px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main :nth-child(1), section:nth-child(2), section:nth-child(3), section:nth-child(4){ 
+    grid-column:1 /span 2;
+    grid-row: auto / span 1;
+    
+  }
+
+  aside:nth-child(1), aside:nth-child(3) {
+    grid-column: 1 / 2;
+  }
+
+  aside:nth-child(2), aside:nth-child(4){
+    grid-column: 2 / 3;
+  }
+
+  main :last-child {
+  grid-column: 1 / span 2;
+  }
+}
+
+
+/*================Tablet Layout====================== */
+
+@media(min-width: 601px){
+  
+  * {
+    background-color: blanchedalmond;
+  }
+  
+  main {
+    overflow: visible auto  ;
+    scrollbar-width: 30px;
+    display: grid;
+    min-width: 601px;
+    margin: 10vw auto;
+    grid-template-rows: 100px 170px 280px 200px 120px ;
+    grid-template-columns:  repeat(4 1fr[columns-1-4]);
+    
+  }
+  
+  main section:nth-child(1), section:nth-child(2){ 
+    grid-column: 1 / span 4;
+    
+  }
+
+  main section:nth-child(2){
+    grid-row: 2 / 3;
+  }
+
+  main section:nth-child(3), section:nth-child(4){
+    grid-row: 3 / 4;
+  }
+
+  main section:nth-child(3){
+    grid-column: 1 / span 2;
+
+  }
+
+  main section:nth-child(4){
+    grid-column: 3 / span 2;
+  }
+
+  aside:nth-child(1), aside:nth-child(2), aside:nth-child(3), aside:nth-child(4) {
+    grid-row: 3 / 4;
+  }
+
+  aside:nth-child(2), aside:nth-child(4){
+    grid-column: 2 / 3;
+  }
+
+  main :last-child {
+  grid-column: 1 / span 4;
+  grid-row: 5 / 6;
+  }
+
   
 }
 
-main {
-  max-width: 767px;
-  grid-template: 2fr ;
+
+/*============== (lap || Desk)top Device Breakpoint. =================*/
+@media(min-width: 920px){
+    * {
+      background-color: red;
+    }
+
+    main {
+      overflow: visible auto  ;
+      scrollbar-width: 30px;
+      display: grid;
+      max-width: 760px;
+      margin: 100px auto;
+      grid-template-rows: 100px 200px 250px 150px;
+      grid-template-columns: 200px repeat(4 1fr[columns-4]);
+
+    }
+
+    main section:first-child {
+      grid-column: 1 / span 5;
+
+    }
+
+    main section:nth-child(2){
+      grid-row: 2 / span 3;
+      grid-column: 1 / 2;
+    }
+
+    main section:nth-child(3){
+      grid-column: 2 / span 2;
+      grid-row: 2 / 3;
+    }
+
+    main section:nth-child(4){
+      grid-column: 4 / span 2;
+      grid-row: 2 / 3;
+    }
+
+    main aside:nth-child(1), aside:nth-child(2), aside:nth-child(3), aside:nth-child(4){
+      grid-row: 3 / 4 ;
+    }
+
+    main aside:nth-child(1){
+      grid-column: 2 /3 ;
+    }
+
+    main aside:nth-child(2){
+      grid-column: 3 / 4;
+    }
+
+    main aside:nth-child(3){
+      grid-column: 4 / 5;
+    }
+
+    main aside:nth-child(4){
+      grid-column: 5 / 6;
+    }
+
+    
+    main :last-child{
+      grid-column: 2 / span 4;
+      grid-row: 4 / 5;
+    }
+
 }
