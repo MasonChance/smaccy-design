@@ -1,4 +1,26 @@
 main > * {
-  background-color: thistle;
+  background-color: #d8bfd8;
+  text-align: center;
+    
+}
+
+section{
+  padding: 3rem 0;
+}
+
+section:nth-child(2){
+  padding: 15rem 0;
+}
+
+section:nth-child(3), section:nth-child(4){
+  padding: 5rem 0;
+}
+
+aside{
+  padding: 7rem 0;
+}
+
+footer{
+  padding: 4rem 0;
 }
 
